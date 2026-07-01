@@ -68,6 +68,17 @@ Include a short comment explaining what the tool does and why it reads the page
 the way it does — the DOM selectors are often site-specific and non-obvious, so
 this is what makes a script maintainable when the site's markup changes.
 
+## Why not TypeScript?
+
+These scripts are plain JavaScript by design. A tool's whole job is to read the
+live DOM of a third-party page, and we generally have no type definitions for
+what's actually in that page — the markup is owned by the site, changes without
+notice, and isn't described by any published schema. TypeScript's guarantees
+would stop at `document.querySelector(...)`, where every result is `Element | null`
+and the interesting structure is unknown anyway. That leaves us maintaining a
+build step and type annotations that add ceremony without buying real safety, so
+we keep the scripts as small, dependency-free JS that ships to clients as-is.
+
 ## Packaging & signing
 
 The component is packaged and signed by
