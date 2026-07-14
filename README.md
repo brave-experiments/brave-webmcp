@@ -90,8 +90,8 @@ The component is packaged and signed by
 [`brave-core-crx-packager`](https://github.com/brave/brave-core-crx-packager).
 
 - Component name: `Brave WebMCP Tool Scripts`
-- Component ID: `kddaehjleefhcbmnkdmjnhiphbomedpf`
+- Component ID: `eingdhelnaolbpcdkgddekhifcjfkalf`
 
 The signing key (`key.pem`) lives in
-1Password under the **Developers Shared Vault**, item **Brave WebMCP Component
+1Password under the **Extensions Developer** vault, item **Brave WebMCP Component
 Key**. Provision it from there when packaging or configuring the publishing job.
