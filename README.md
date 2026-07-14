@@ -17,11 +17,16 @@ The Brave-side consumer lives in
 ## Layout
 
 ```
-manifest.json          Component manifest (name, version, public key).
 scripts/               One .js file per WebMCP tool.
   gmail_unread_count.js
   example_page_heading.js
 ```
+
+The component `manifest.json` (name, version, public key) is **not** kept here.
+It is owned by
+[`brave-core-crx-packager`](https://github.com/brave/brave-core-crx-packager)
+(`manifests/web-mcp/default-manifest.json`), which stamps the version at package
+time. This repo only holds the `scripts/` that get bundled into the component.
 
 A new tool is added by dropping a new `.js` file into `scripts/`. There is no
 central index to update — Brave enumerates the directory and parses each file's
